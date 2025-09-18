@@ -1,6 +1,7 @@
 import java.sql.SQLOutput;
 
 public class DNDCharacter {
+    public String getHitpoints;
     private String name;
     private String race;
     private String characterClass;
@@ -33,6 +34,10 @@ public class DNDCharacter {
         this.intelligence=intelligence;
     }
 
+    public int getHitpoints(){
+        return hitpoints;
+    }
+
     public void displayCharacterInfo(){
         System.out.println("Name: " + this.name);
         System.out.println("Race: " + this.race);
@@ -53,8 +58,13 @@ public class DNDCharacter {
     }
 
     public void heal(int healing){
-
+        hitpoints += healing;
+        if (hitpoints > 100){
+            hitpoints = 100;
+        }
     }
 
-
+    public boolean isAlive(){
+        return hitpoints != 0;
+    }
 }
