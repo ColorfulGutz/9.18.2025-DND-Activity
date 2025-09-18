@@ -1,8 +1,7 @@
 public class Main {
     public static void main(String[] args) {
         DNDCharacter Mark = new DNDCharacter();
-        DNDCharacter Mike = new DNDCharacter("Mark", "Draconian", "Bard", 1, 75, 7,
-                7, 7);
+        DNDCharacter Mike = new DNDCharacter("Mark", "Draconian", "Bard", 1, 75, 14, 18, 8, 20, 14, 12);
         Mark.displayCharacterInfo();
         Mike.displayCharacterInfo();
         Mark.takeDamage(15);

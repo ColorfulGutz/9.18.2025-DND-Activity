@@ -10,20 +10,26 @@ public class DNDCharacter {
     private int strength;
     private int dexterity;
     private int intelligence;
+    private int charisma;
+    private int wisdom;
+    private int constitution;
 
     public DNDCharacter() {
-        this.name = "Unknown";
-        this.race = "Human";
-        this.characterClass = "Fighter";
-        this.level = 1;
-        this.hitpoints = 100;
-        this.strength = 10;
-        this.dexterity = 5;
-        this.intelligence = 3;
+        name = "Unknown";
+        race = "Human";
+        characterClass = "Fighter";
+        level = 1;
+        hitpoints = 100;
+        strength = 14;
+        dexterity = 12;
+        intelligence = 10;
+        charisma = 13;
+        wisdom = 11;
+        constitution = 13;
     }
 
     public DNDCharacter(String name, String race, String characterClass, int level,
-                        int hitpoints, int strength, int dexterity, int intelligence){
+                        int hitpoints, int strength, int dexterity, int intelligence, int charisma, int wisdom, int constitution){
         this.name=name;
         this.race=race;
         this.characterClass=characterClass;
@@ -32,6 +38,9 @@ public class DNDCharacter {
         this.strength=strength;
         this.dexterity=dexterity;
         this.intelligence=intelligence;
+        this.charisma=charisma;
+        this.wisdom=wisdom;
+        this.constitution=constitution;
     }
 
     public int getHitpoints(){
@@ -39,14 +48,17 @@ public class DNDCharacter {
     }
 
     public void displayCharacterInfo(){
-        System.out.println("Name: " + this.name);
-        System.out.println("Race: " + this.race);
-        System.out.println("Characters class: " + this.characterClass);
-        System.out.println("Level: " + this.level);
-        System.out.println("Hitpoints: " + this.hitpoints);
-        System.out.println("Strength: " + this.strength);
-        System.out.println("Dexterity: " + this.dexterity);
-        System.out.println("Intelligence: " + this.intelligence);
+        System.out.println("Name: " + name);
+        System.out.println("Race: " + race);
+        System.out.println("Characters class: " + characterClass);
+        System.out.println("Level: " + level);
+        System.out.println("Hitpoints: " + hitpoints);
+        System.out.println("Strength: " + strength);
+        System.out.println("Dexterity: " + dexterity);
+        System.out.println("Intelligence: " + intelligence);
+        System.out.println("Charisma: " + charisma);
+        System.out.println("Wisdowm: " + wisdom);
+        System.out.println("Constitution: " + constitution);
         System.out.println();
     }
 
